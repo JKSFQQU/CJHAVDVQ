@@ -1,0 +1,512 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--SEO-->
+<title>[Tu nombre] · Editor de video para YouTubers y streamers en Chile</title>
+<meta name="description" content="Editor de video en Chile para YouTubers y streamers: Shorts, clips de directos y videos largos con ritmo, subtítulos y hooks. Primer clip de prueba gratis.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="[Tu nombre] · Editor de video para YouTubers y streamers en Chile">
+<meta property="og:description" content="Editor de video en Chile para YouTubers y streamers: Shorts, clips de directos y videos largos con ritmo, subtítulos y hooks. Primer clip de prueba gratis.">
+<meta name="twitter:card" content="summary">
+<!--/SEO-->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✂️%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e2d7ff;--bg2:#cdbcff;--card:#f3eeff;--ink:#1c1235;--mut:#4f4080;--acc:#6b3df0;--on:#fff;--line:rgba(60,30,130,.22);--sh:rgba(80,40,180,.2);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1233;--bg2:#3a2870;--card:#251a47;--ink:#f0eaff;--mut:#bfb0ea;--acc:#b99cff;--on:#1b1233;--line:rgba(200,180,255,.22);--sh:rgba(0,0,0,.45);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b1233;--bg2:#3a2870;--card:#251a47;--ink:#f0eaff;--mut:#bfb0ea;--acc:#b99cff;--on:#1b1233;--line:rgba(200,180,255,.22);--sh:rgba(0,0,0,.45);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Archivo,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.w{max-width:1180px;margin:0 auto;padding:0 20px}
+.mono,.eb,.st span,.cb small,.tm,.cnt,.logo small,.tag,.dur{font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:500}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
+.logo{font-weight:900;letter-spacing:-.02em;text-decoration:none;line-height:1.1}
+.logo small{display:block;font-size:10px;letter-spacing:.22em;color:var(--mut)}
+.nav nav{display:flex;gap:26px;font-size:14px;font-weight:600}
+.nav nav a{text-decoration:none;opacity:.8}.nav nav a:hover{opacity:1;color:var(--acc)}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font:800 13px Archivo,sans-serif;letter-spacing:.08em;text-decoration:none;border:2px solid currentColor;color:inherit;background:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--acc);border-color:var(--acc);color:var(--on)}
+.btn.inv{background:var(--on);border-color:var(--on);color:var(--acc)}
+.btn.s{padding:10px 18px}
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:center;padding:64px 0 40px}
+.eb{font-size:12px;letter-spacing:.2em;color:var(--mut);margin:0 0 18px}
+h1{font:900 clamp(46px,8.4vw,112px)/.9 Archivo,sans-serif;letter-spacing:-.035em;margin:0 0 26px}
+h1 em{font-style:normal;color:var(--acc)}
+.hero p.lead{font-size:18px;max-width:560px;color:var(--mut);margin:0 0 30px}
+.bt{display:flex;flex-wrap:wrap;gap:12px}
+.ph{aspect-ratio:9/16;max-width:290px;width:100%;margin:0 auto;border-radius:30px;border:2px solid var(--ink);background:linear-gradient(160deg,var(--acc),#b79cff 62%,#efe6ff);position:relative;box-shadow:0 30px 60px var(--sh);display:grid;place-items:center;overflow:hidden}
+.ph i{width:76px;height:76px;border-radius:50%;background:#fff;color:#6b3df0;display:grid;place-items:center;font-style:normal;font-size:28px;padding-left:5px}
+.ph b{position:absolute;top:18px;left:18px;font:500 11px "JetBrains Mono",monospace;letter-spacing:.14em;color:#1c1235;background:rgba(255,255,255,.75);padding:5px 10px;border-radius:99px}
+.ph s{position:absolute;left:18px;right:18px;bottom:22px;height:6px;border-radius:9px;background:rgba(255,255,255,.4);text-decoration:none}
+.ph s::after{content:"";position:absolute;inset:0 62% 0 0;background:#fff;border-radius:9px}
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.st div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 22px}
+.st b{display:block;font:900 clamp(30px,4.2vw,50px)/1 Archivo,sans-serif;letter-spacing:-.03em;margin-bottom:10px}
+.st span{font-size:11px;letter-spacing:.14em;color:var(--mut)}
+.mq{overflow:hidden;background:var(--ink);color:var(--bg);padding:18px 0;margin:64px 0 0}
+.mq div{display:flex;width:max-content;animation:mv 34s linear infinite}
+.mq span{padding:0 26px;font:800 20px Archivo,sans-serif;white-space:nowrap}
+.mq span::after{content:"✦";margin-left:52px;color:var(--acc)}
+@keyframes mv{to{transform:translateX(-50%)}}
+.sec{padding:84px 0 0}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+h2{font:900 clamp(34px,6vw,66px)/.95 Archivo,sans-serif;letter-spacing:-.03em;margin:0}
+.cnt{font-size:13px;color:var(--mut)}
+.sub{max-width:560px;color:var(--mut);margin:14px 0 0}
+.g{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.c{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.c:hover{transform:translateY(-5px);box-shadow:0 20px 40px var(--sh)}
+.th{aspect-ratio:4/3;position:relative;display:grid;place-items:center;background:linear-gradient(var(--a,135deg),var(--acc),var(--bg2));transition:filter .3s}
+.th i{width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.9);color:#6b3df0;display:grid;place-items:center;font-style:normal;padding-left:3px}
+.tag,.dur{position:absolute;font-size:11px;letter-spacing:.1em;background:rgba(255,255,255,.85);color:#1c1235;padding:4px 10px;border-radius:99px}
+.tag{top:12px;left:12px}.dur{bottom:12px;right:12px}
+.cb{padding:20px}.cb small{font-size:11px;letter-spacing:.12em;color:var(--mut);text-transform:uppercase}
+.cb h3{margin:6px 0 8px;font:800 21px/1.15 Archivo,sans-serif}.cb p{margin:0;color:var(--mut);font-size:14.5px}
+.tg{position:absolute;left:12px;bottom:12px;display:flex;gap:4px;background:rgba(255,255,255,.85);padding:4px;border-radius:99px}
+.tg button{border:0;background:none;color:#1c1235;font:800 11px Archivo,sans-serif;letter-spacing:.08em;padding:6px 12px;border-radius:99px;cursor:pointer}
+.tg button[aria-pressed="true"]{background:#6b3df0;color:#fff}
+.ba[data-v="a"] .th{filter:grayscale(.95) contrast(.75) brightness(.9)}
+.pl{padding:30px;border-radius:26px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.pl.f{background:var(--acc);color:var(--on);border-color:var(--acc)}
+.pl h3{font:900 26px Archivo,sans-serif;margin:0;letter-spacing:-.02em}
+.bd{align-self:flex-start;font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;background:var(--on);color:var(--acc);padding:5px 12px;border-radius:99px}
+.pr small{display:block;font-size:13px;opacity:.92}.pr b{font:900 36px/1.1 Archivo,sans-serif;letter-spacing:-.02em}
+.pl ul{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:10px;flex:1}
+.pl li{padding-left:26px;position:relative;font-size:15px}
+.pl li::before{content:"✓";position:absolute;left:0;font-weight:900;color:var(--acc)}
+.pl.f li::before{color:var(--on)}
+.pl p{margin:0;opacity:.85}
+.pc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pc div{border-top:2px solid var(--ink);padding-top:16px}
+.tm{font-size:13px;color:var(--acc)}
+.pc h3{font:800 19px/1.2 Archivo,sans-serif;margin:8px 0}.pc p{margin:0;color:var(--mut);font-size:14.5px}
+.cup{background:var(--acc);color:var(--on);border-radius:32px;padding:clamp(28px,5vw,68px);display:grid;gap:18px;justify-items:start}
+.cup p{margin:0;max-width:640px;font-size:18px}.cup p.fine{font-size:13px;opacity:.8}
+.ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.pic{aspect-ratio:4/5;border-radius:28px;border:2px solid var(--ink);background:linear-gradient(200deg,var(--acc),var(--bg2));position:relative;display:grid;place-items:center;font:900 28px Archivo,sans-serif;color:#fff}
+.pic span{position:absolute;left:16px;bottom:16px;font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;background:rgba(255,255,255,.88);color:#1c1235;padding:6px 12px;border-radius:99px}
+.ab p{color:var(--mut);margin:18px 0 0;max-width:600px}
+.tl{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.tl span{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 14px;font-weight:800;font-size:14px}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.note{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font:500 12px "JetBrains Mono",monospace;letter-spacing:.12em}
+.note::before{content:"";width:9px;height:9px;border-radius:50%;background:#58e08a;animation:pu 1.6s infinite}
+@keyframes pu{50%{opacity:.25}}
+form{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px;display:grid;gap:16px}
+label{display:grid;gap:6px;font:500 12px "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--mut)}
+input,textarea{font:400 16px Archivo,sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:13px 15px;width:100%}
+textarea{min-height:150px;resize:vertical}
+footer{margin-top:90px;border-top:1px solid var(--line);padding:26px 0 34px;font-size:14px;color:var(--mut)}
+footer .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:860px){.hero,.ab,.ct{grid-template-columns:1fr}.pc,.st{grid-template-columns:1fr 1fr}.nav nav{display:none}.hero{padding-top:40px}.ph{max-width:240px}}
+@media(max-width:480px){.pc{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.mq div,.note::before{animation:none}html{scroll-behavior:auto}.c,.btn{transition:none}.c:hover,.btn:hover{transform:none}}
+
+
+.sgw{display:grid;gap:16px}
+.sw{max-width:900px;width:100%;margin:0 auto}
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.th.w{aspect-ratio:16/9}.th.v{aspect-ratio:9/16}
+.c .th{overflow:hidden}
+@media(max-width:700px){.sv{grid-template-columns:1fr}.sv .c{max-width:320px;width:100%;margin:0 auto}}
+.ph img,.ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pb{position:relative;width:76px;height:76px;border-radius:50%;border:0;background:#fff;color:#6b3df0;font-size:28px;padding-left:5px;cursor:pointer;box-shadow:0 8px 24px var(--sh)}
+.pend{position:relative;margin:20px;padding:14px 18px;border-radius:14px;background:rgba(28,18,53,.78);color:#fff;font:500 12px/1.5 "JetBrains Mono",monospace;letter-spacing:.08em;text-align:center}
+button.th{border:0;padding:0;width:100%;cursor:pointer;font:inherit}
+.th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.th i{position:relative}
+#vm{width:min(640px,94vw);max-height:90vh;padding:0;border:2px solid var(--ink);border-radius:24px;background:var(--bg);color:var(--ink);overflow:auto}
+#vm::backdrop{background:rgba(20,10,50,.6)}
+.vi{padding:22px;display:grid;gap:12px}.vi h3{margin:0;font:900 26px Archivo,sans-serif}.vi small{font:500 12px "JetBrains Mono",monospace;color:var(--mut)}
+.vi video{width:100%;max-height:58vh;background:#000;border-radius:14px}
+.vi dt{font:500 11px "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--acc);text-transform:uppercase;margin-top:6px}.vi dd{margin:2px 0 0;color:var(--mut)}
+.vx{justify-self:end}
+.cv{max-width:760px;margin:0 auto}.cv video{width:100%;max-height:70vh;background:#000;border-radius:16px}
+.tg2{display:flex;gap:8px;justify-content:center;margin-bottom:14px}
+.tg2 button[aria-pressed=true]{background:var(--acc);color:var(--on);border-color:var(--acc)}
+.cp{background:var(--card);color:var(--mut);border:1px dashed var(--line);max-width:760px;margin:0 auto}
+.sk{position:absolute;left:-9999px;top:0}.sk:focus{left:12px;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:30;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:800}
+#mn{display:none;background:none;border:2px solid currentColor;border-radius:99px;padding:9px 16px;font:800 12px Archivo,sans-serif;letter-spacing:.08em;color:inherit;cursor:pointer}
+.nav nav a[aria-current=true]{color:var(--acc);opacity:1}
+.pl.f :focus-visible,.cup :focus-visible{outline-color:var(--on)}
+@media(max-width:860px){#mn{display:inline-block}.nav nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 20px}.nav nav.open{display:flex}.nav nav a{padding:14px 0;border-top:1px solid var(--line);opacity:1}.nav{gap:8px}}
+#pg{position:relative;isolation:isolate;--g1:rgba(255,255,255,.62);--g2:rgba(255,255,255,.2);--gb:rgba(255,255,255,.8);--b1:var(--acc);--b2:#6ee0ff}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #pg{--g1:rgba(255,255,255,.18);--g2:rgba(255,255,255,.05);--gb:rgba(255,255,255,.3);--b1:#6b3df0;--b2:#1f7fa8}}
+:root[data-theme="dark"] #pg{--g1:rgba(255,255,255,.18);--g2:rgba(255,255,255,.05);--gb:rgba(255,255,255,.3);--b1:#6b3df0;--b2:#1f7fa8}
+#pg::before,#pg::after{content:"";position:absolute;z-index:-1;border-radius:50%;filter:blur(46px);opacity:.55;pointer-events:none}
+#pg::before{width:260px;height:260px;left:3%;top:-30px;background:var(--b1)}#pg::after{width:300px;height:300px;right:4%;bottom:-40px;background:var(--b2)}
+.pl.fc{padding:0;background:none;border:0;border-radius:0;display:block;perspective:1200px}
+.fi{display:grid;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.pl.fc.on .fi{transform:rotateY(180deg)}
+.face{grid-area:1/1;position:relative;overflow:hidden;min-height:340px;padding:30px;border-radius:26px;display:flex;flex-direction:column;gap:14px;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:linear-gradient(135deg,var(--g1),var(--g2));border:1px solid var(--gb);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);box-shadow:inset 0 1px 0 var(--gb),inset 0 -10px 24px rgba(107,61,240,.12),0 20px 40px var(--sh)}
+.face::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--mx,25%) var(--my,0%),rgba(255,255,255,.45),transparent 55%);opacity:.7}
+.ff{cursor:pointer}.ff .btn{align-self:flex-start;margin-top:auto}.fb{transform:rotateY(180deg)}
+.pl.fc.hl .face{background:linear-gradient(135deg,color-mix(in srgb,var(--acc) 90%,transparent),color-mix(in srgb,var(--acc) 58%,transparent));color:var(--on)}
+.hl .fb li::before{color:var(--on)}.hl .face::after{opacity:.3}
+@media(prefers-reduced-motion:reduce){.fi{transition:none}}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:28px;width:100%}.cg h3{font:800 18px/1.2 Archivo,sans-serif;margin:0 0 10px}.cup ul{margin:0;padding-left:20px;display:grid;gap:6px}@media(max-width:700px){.cg{grid-template-columns:1fr}}.er{font:500 12px/1.4 "JetBrains Mono",monospace;color:#b3261e}.fs{margin:0;font-size:14px;color:var(--mut)}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .er{color:#ff9a90}}:root[data-theme="dark"] .er{color:#ff9a90}.vi video,.cv video{aspect-ratio:16/9;object-fit:contain}
+
+/* ===== MINIATURAS ILUSTRADAS ===== */
+.mini{isolation:isolate}
+.mi-intro{position:relative;max-width:860px;margin-bottom:44px}
+.mi-intro::after{content:"";position:absolute;right:-8%;top:-24px;width:260px;height:260px;background:radial-gradient(circle,var(--acc) 1.6px,transparent 2.2px) 0 0/14px 14px;opacity:.38;-webkit-mask:radial-gradient(circle,#000 0,transparent 70%);mask:radial-gradient(circle,#000 0,transparent 70%);pointer-events:none;z-index:-1}
+.mi-st{display:inline-block;transform:rotate(-3deg);font:500 11px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.14em;background:var(--ink);color:var(--bg);padding:6px 12px;border-radius:8px;margin-bottom:18px}
+.mi-h{font:900 clamp(34px,6.4vw,76px)/.92 Archivo,sans-serif;letter-spacing:-.035em;margin:0}
+.mi-l1,.mi-l2{display:block}.mi-l2{color:var(--acc)}
+.mi-img{position:relative;aspect-ratio:16/9;overflow:hidden;display:grid;place-items:center;background:linear-gradient(var(--a,135deg),var(--acc),var(--bg2))}
+.mi-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.mi-ph{position:relative;display:grid;gap:8px;justify-items:center;text-align:center;color:#fff;padding:16px}
+.mi-ph b{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.92);color:#6b3df0;display:grid;place-items:center;font-size:30px;line-height:1}
+.mi-ph span{font:500 12px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.14em;background:rgba(28,18,53,.78);padding:6px 12px;border-radius:99px}
+.mi-ph small{font:500 11px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.12em;color:#fff;text-shadow:0 1px 6px rgba(28,18,53,.7)}
+#mfeat{margin:0 0 28px}
+.mi-feat{position:relative}
+.mi-feat::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:2px dashed var(--acc);border-radius:32px;z-index:-1;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.mi-fr{position:relative;border:2px solid var(--ink);border-radius:30px;overflow:hidden;box-shadow:0 30px 60px var(--sh);background:var(--card)}
+.mi-feat:hover::before{transform:translate(6px,6px)}.mi-feat:hover .mi-img img{transform:scale(1.035)}
+.mi-cap{position:absolute;left:0;right:0;bottom:0;padding:56px 24px 22px;background:linear-gradient(transparent,rgba(20,10,50,.82));color:#fff;display:grid;gap:4px;pointer-events:none}
+.mi-cap small{font:500 11px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.92}
+.mi-cap b{font:900 clamp(20px,3.4vw,38px)/1.05 Archivo,sans-serif;letter-spacing:-.02em}
+.mi-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.mc:hover .mi-img img{transform:scale(1.06)}
+.mc .cb{padding:18px 20px 20px}
+.mc .cb p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mi-cup{margin:56px 0 0}
+.mi-cup h3{font:900 clamp(30px,5.6vw,60px)/.95 Archivo,sans-serif;letter-spacing:-.03em;margin:0}
+.mi-sh{margin:56px 0 18px}
+.mi-sv{display:grid;gap:16px;grid-template-columns:repeat(5,1fr)}
+.sv2{padding:26px;border-radius:24px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.sv2.hl{grid-column:span 2;background:var(--acc);color:var(--on);border-color:var(--acc);box-shadow:0 24px 48px var(--sh)}
+.sv2 h3{font:900 clamp(20px,2.2vw,26px)/1.05 Archivo,sans-serif;margin:0;letter-spacing:-.02em}
+.sv2 p{margin:0;color:var(--mut);font-size:15px;flex:1}.sv2.hl p{color:inherit;opacity:.92}
+.sv2 .sp{font:900 28px/1.1 Archivo,sans-serif;letter-spacing:-.02em}
+.sv2.hl :focus-visible{outline-color:var(--on)}
+@keyframes mir{from{opacity:0;transform:translateY(22px)}}
+.rv .mi-r{opacity:0}.rv .mi-r.in{opacity:1;animation:mir .7s cubic-bezier(.2,.8,.2,1) var(--d,0ms) backwards}
+@media(max-width:1000px){.mi-sv{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.mi-sv{grid-template-columns:1fr}.sv2.hl{grid-column:auto}.mi-feat::before{inset:8px -8px -8px 8px;border-radius:24px}.mi-fr{border-radius:22px}.mi-cap{padding:40px 16px 14px}.mi-intro::after{right:-4%;width:180px;height:180px}}
+@media(prefers-reduced-motion:reduce){.mi-img img,.mi-feat::before{transition:none}.mi-feat:hover::before{transform:none}.mi-feat:hover .mi-img img,.mc:hover .mi-img img{transform:none}.rv .mi-r.in{animation:none}}
+
+/* ===== Bloques de texto añadidos desde el editor ===== */
+.xb{margin:22px 0 0;max-width:820px;white-space:pre-line;overflow-wrap:anywhere}
+.xh{font:900 clamp(30px,5vw,56px)/.98 Archivo,sans-serif;letter-spacing:-.03em;margin-top:34px}
+.xs{font:800 clamp(19px,2.4vw,24px)/1.25 Archivo,sans-serif}
+.xp{color:var(--mut);font-size:17px}
+#msvc{position:relative;isolation:isolate;--g1:rgba(255,255,255,.62);--g2:rgba(255,255,255,.2);--gb:rgba(255,255,255,.8);--b1:var(--acc);--b2:#6ee0ff;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #msvc{--g1:rgba(255,255,255,.18);--g2:rgba(255,255,255,.05);--gb:rgba(255,255,255,.3);--b1:#6b3df0;--b2:#1f7fa8}}
+:root[data-theme="dark"] #msvc{--g1:rgba(255,255,255,.18);--g2:rgba(255,255,255,.05);--gb:rgba(255,255,255,.3);--b1:#6b3df0;--b2:#1f7fa8}
+#msvc::before,#msvc::after{content:"";position:absolute;z-index:-1;border-radius:50%;filter:blur(46px);opacity:.55;pointer-events:none}
+#msvc::before{width:260px;height:260px;left:3%;top:-30px;background:var(--b1)}#msvc::after{width:300px;height:300px;right:4%;bottom:-40px;background:var(--b2)}
+.cr{max-width:400px;width:100%;justify-self:center}
+.pic{overflow:hidden}.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cbs{display:grid;gap:12px;margin-top:18px}
+.cl{display:block;text-align:center;padding:17px 24px;font-size:15px;letter-spacing:.1em}
+</style></head><body>
+<a class="sk" href="#top">Saltar al contenido</a>
+<header><div class="w nav">
+<a class="logo" href="#top"><span>[TU NOMBRE]</span><small>VIDEO EDITOR</small></a>
+<nav id="mnv" aria-label="Principal"><a href="#muestras">Muestras</a><a href="#planes">Planes</a><a href="#proceso">Proceso</a><a href="#sobre-mi">Sobre mí</a><a href="#miniaturas">Miniaturas</a><a href="#faq">FAQ</a></nav>
+<button id="mn" type="button" aria-expanded="false" aria-controls="mnv">MENÚ</button><a class="btn p s" href="#contacto">ESCRÍBEME</a>
+</div></header>
+
+<main id="top">
+<section class="w hero">
+<div>
+<p class="eb">SHOWREEL 2026 · LONG-FORM · SHORTS · STREAMS</p>
+<h1>CORTES QUE NO DEJAN <em>IRSE.</em></h1>
+<p class="lead">Edito videos para YouTubers, streamers y creadores de contenido que quieren transformar sus grabaciones, directos e ideas en contenido que la gente realmente quiera ver. Desde videos largos hasta Shorts dinámicos.</p>
+<div class="bt"><a class="btn p" href="#muestras">VER MI TRABAJO</a><a class="btn" href="#cupos">CONSIGUE UN CLIP DE PRUEBA GRATIS</a></div>
+</div>
+<div class="ph" id="reel"></div>
+</section>
+
+<section class="w"><div class="st">
+<div><b>3</b><span>FORMATOS: SHORTS, LONG-FORM Y HIGHLIGHTS</span></div>
+<div><b>48–72 H</b><span>PLAZO ORIENTATIVO DE ENTREGA</span></div>
+<div><b>1</b><span>REVISIÓN DE AJUSTES INCLUIDA</span></div>
+<div><b>$0</b><span>PRIMERA PRUEBA GRATUITA</span></div>
+</div></section>
+
+<div class="mq" aria-hidden="true"><div><span>SHORTS</span><span>TIKTOK</span><span>YOUTUBE</span><span>REELS</span><span>TWITCH</span><span>HIGHLIGHTS</span><span>LONG-FORM</span><span>VIDEO EDITING</span></div></div>
+
+<section class="w sec" id="muestras">
+<div class="hd"><h2>MUESTRAS</h2><span class="cnt" id="cnt"></span></div>
+<div class="sgw" id="sg"></div></section>
+
+<section class="w sec" id="antes-despues">
+<div class="hd"><div><h2>ANTES Y DESPUÉS</h2><p class="sub">Material original frente a la versión editada. Al alternar, el video continúa desde el mismo punto.</p></div></div>
+<div id="cmp"></div></section>
+
+<section class="w sec" id="planes">
+<div class="hd"><div><h2>CÓMO TRABAJAMOS</h2><p class="sub">Cupos mensuales limitados para que cada canal tenga tiempo real de edición.</p></div></div>
+<div class="g" id="pg" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+<article class="pl f"><span class="bd">OFERTA DE LANZAMIENTO</span><h3>SHORTS PACK</h3><div class="pr"><b>$50.000 CLP</b><small>por pack de 5 Shorts</small></div><ul><li>5 Shorts de hasta 60 segundos</li><li>Subtítulos dinámicos</li><li>Efectos de sonido</li><li>Zooms y recursos visuales</li><li>Música cuando corresponda</li><li>1 ronda de ajustes</li></ul><a class="btn" href="#contacto" data-svc="Shorts / Reels">RESERVAR CUPO</a></article>
+<article class="pl"><h3>LONG-FORM</h3><div class="pr"><b>$60.000 CLP</b><small>por video</small></div><ul><li>1 video de hasta 10 minutos</li><li>Cortes y limpieza de audio</li><li>Música y efectos</li><li>Edición narrativa</li><li>1 ronda de ajustes</li></ul><a class="btn" href="#contacto" data-svc="Videos largos">RESERVAR CUPO</a></article>
+<article class="pl"><h3>A TU MEDIDA</h3><div class="pr"><b>Cotización personalizada</b><small>precio según el alcance</small></div><ul><li>Edición de streams</li><li>Highlights</li><li>Proyectos extensos</li><li>Paquetes personalizados</li></ul><a class="btn" href="#contacto" data-svc="Otro">COTIZAR</a></article>
+</div>
+<p class="sub" style="margin-top:22px">Precios y entregables son propuestas iniciales: los definitivos se confirman antes de comenzar el proyecto y pueden variar según la complejidad del material.</p></section>
+
+<section class="w sec" id="proceso">
+<div class="hd"><h2>PROCESO</h2></div>
+<div class="pc">
+<div><span class="tm">00:00</span><h3>BRIEF Y REFERENCIAS</h3><p>El cliente explica qué contenido hace, qué estilo busca y cuáles son sus objetivos.</p></div>
+<div><span class="tm">00:01</span><h3>PRIMERA VERSIÓN</h3><p>Se prepara una primera edición para revisar el ritmo, el estilo y la dirección del proyecto.</p></div>
+<div><span class="tm">00:02</span><h3>AJUSTES</h3><p>Se aplican los cambios acordados dentro de la ronda de revisión incluida.</p></div>
+<div><span class="tm">00:03</span><h3>EXPORTACIÓN Y ENTREGA</h3><p>Se entregan los archivos finales en los formatos y resoluciones acordados.</p></div>
+</div>
+<div class="tl" style="margin-top:28px"><span>Precio y entregables acordados antes de comenzar</span><span>Sin costos sorpresa</span><span>Revisiones definidas desde el principio</span><span>Comunicación durante el proceso</span></div></section>
+
+<section class="w sec" id="cupos">
+<div class="cup"><span class="note slots"></span><h2>PRUEBA MI EDICIÓN. SIN PAGAR NADA.</h2>
+<p>Te edito un fragmento de tu propio contenido para que puedas comprobar cómo trabajo antes de contratarme.</p>
+<div class="cg"><div><h3>¿QUÉ INCLUYE?</h3><ul><li>Un clip de 20–30 segundos</li><li>Subtítulos</li><li>Edición dinámica</li><li>Efectos sonoros</li><li>Recursos visuales según el contenido</li></ul></div><div><h3>CONDICIONES</h3><ul><li>Un clip por creador</li><li>El cliente proporciona el material original</li><li>No incluye la edición completa de un video</li><li>No existe obligación de contratar después</li><li>Sujeta a disponibilidad de cupos</li></ul></div></div>
+<a class="btn inv" href="#contacto" data-svc="Clip de prueba gratuito">QUIERO MI CLIP GRATIS</a></div>
+</section>
+
+<section class="w sec" id="sobre-mi"><div class="ab">
+<div class="pic" id="pic" role="img" aria-label="Retrato del editor"><em class="pf">[TU FOTO]</em><span>EDITANDO DESDE [año real]</span></div>
+<div><h2>EDITO COMO SI FUERA MI PROPIO CANAL</h2>
+<p>Soy [tu nombre] y edito video para streamers y creadores. Empecé editando contenido para TikTok y hoy me enfoco en shorts, clips de directos y videos largos. Estoy construyendo mi lista de clientes, así que cada proyecto recibe mi atención completa: respondo rápido, entrego a tiempo y ajusto hasta que el corte funcione. Me importa que el espectador llegue al final del video.</p>
+<p>No creo que editar un video consista simplemente en llenar la pantalla de efectos. Se trata de saber cuándo cortar, cuándo dejar respirar una escena y cómo mantener la atención sin sacrificar lo que hace interesante al contenido.</p>
+<p>También dibujo manga, así que puedo sumar miniaturas ilustradas y emotes a tu canal.</p>
+<p class="eb" style="margin:24px 0 0">ESPECIALIDADES</p><div class="tl" style="margin-top:10px"><span>Shorts y Reels</span><span>Videos de YouTube</span><span>Highlights de streams</span><span>Storytelling audiovisual</span></div>
+<p class="eb" style="margin:22px 0 0">HERRAMIENTAS</p><div class="tl" style="margin-top:10px"><span>[Herramienta 1]</span><span>[Herramienta 2]</span><span>[Herramienta 3]</span></div></div></div></section>
+
+<section class="w sec mini" id="miniaturas">
+<div class="mi-intro">
+<span class="mi-st" aria-hidden="true">✎ DIBUJADO A MANO</span>
+<p class="eb">ILUSTRACIÓN DIGITAL</p>
+<div class="mi-h" role="heading" aria-level="2"><span class="mi-l1">NO SOLO EDITO VIDEOS.</span> <span class="mi-l2">TAMBIÉN LOS ILUSTRO.</span></div>
+<p class="sub">Miniaturas dibujadas a mano, diseñadas para darle personalidad a cada video.</p>
+</div>
+<div id="mfeat"></div>
+<div class="mi-grid" id="mgal"></div>
+<div class="cup mi-cup mi-r">
+<h3>¿TIENES UN VIDEO EN MENTE?</h3>
+<p>Hagamos que tu miniatura sea tan interesante como tu contenido.</p>
+<a class="btn inv" id="mi-btn" href="#contacto" data-svc="Miniatura ilustrada">ENCARGAR UNA MINIATURA ↗</a>
+</div>
+<p class="eb mi-sh">SERVICIOS DE MINIATURAS</p>
+<div class="mi-sv" id="msvc"></div>
+</section>
+
+<section class="w sec" id="proceso-ilustracion">
+<div class="hd"><h2>PROCESO DE ILUSTRACIÓN</h2></div>
+<div class="pc">
+<div><span class="tm">00:00</span><h3>IDEA Y REFERENCIAS</h3><p>El cliente cuenta de qué trata el video, qué título lleva y qué estilo o personajes quiere ver en la miniatura.</p></div>
+<div><span class="tm">00:01</span><h3>BOCETO</h3><p>Preparo un boceto rápido con la composición, la pose y la expresión para validar la dirección antes de entintar.</p></div>
+<div><span class="tm">00:02</span><h3>LÍNEA Y COLOR</h3><p>Limpio el trazo, aplico color, luces y contraste para que la miniatura destaque y se lea incluso en tamaño pequeño.</p></div>
+<div><span class="tm">00:03</span><h3>EXPORTACIÓN Y ENTREGA</h3><p>Se entrega la ilustración final en formato 16:9 (1280×720 px) lista para subir a tu canal.</p></div>
+</div>
+<div class="tl" style="margin-top:28px"><span>Boceto aprobado antes de entintar</span><span>Formato 1280×720 px</span><span>Revisiones definidas desde el principio</span><span>Comunicación durante el proceso</span></div></section>
+
+<section class="w sec" id="faq">
+<div class="hd"><h2>PREGUNTAS FRECUENTES</h2></div>
+<div id="fq"></div></section>
+
+<section class="w sec" id="contacto"><div class="ct">
+<div><h2>¿TU CANAL NECESITA UN EDITOR? PRUÉBAME GRATIS.</h2>
+<p class="sub">Cuéntame qué publicas, cada cuánto y qué formato necesitas. Te respondo en menos de 24 horas con disponibilidad y una propuesta concreta.</p>
+<span class="note slots"></span>
+<button class="btn s" id="mkb" type="button" style="margin-top:20px">DESCARGAR MEDIA KIT</button></div>
+<div class="cr"><div class="pic" id="cpic" role="img" aria-label="Foto de contacto"><em class="pf">[TU FOTO]</em><span>ESCRÍBEME</span></div><div class="cbs" id="soc"></div></div></div></section>
+</main>
+
+<footer><div class="w"><span>© <b id="yr">2026</b> <span class="cp">[Tu nombre]</span></span><nav class="fn" aria-label="Pie"><a href="#muestras">Muestras</a><a href="#planes">Planes</a><a href="#miniaturas">Miniaturas</a><a href="#faq">FAQ</a><a href="#contacto">Contacto</a></nav><span class="ft">SHORTS · LONG-FORM · STREAMS</span></div><div class="w tl" id="fsoc" style="margin-top:14px"></div></footer>
+<div id="mk" aria-hidden="true"></div>
+<dialog id="vm" aria-label="Detalle de la muestra"><div class="vi"><button class="btn s vx" id="vx" type="button">CERRAR ✕</button><div id="vb"></div></div></dialog>
+
+<!--ED-->
+<style>
+[hidden]{display:none!important}
+#eb{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--ink);color:var(--bg);border:0;border-radius:99px;padding:14px 22px;font:800 13px Archivo,sans-serif;letter-spacing:.08em;cursor:pointer;box-shadow:0 10px 30px var(--sh)}
+#ed{width:min(760px,94vw);max-height:90vh;padding:0;border:2px solid var(--ink);border-radius:24px;background:var(--bg);color:var(--ink)}
+#ed[open]{display:flex;flex-direction:column}
+#ed::backdrop{background:rgba(20,10,50,.6)}
+.eh,.ef,.etb{padding:14px 22px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.eh,.etb{border-bottom:1px solid var(--line)}.ef{border-top:1px solid var(--line);justify-content:flex-end}
+.eh b{font:900 20px Archivo,sans-serif;margin-right:auto}.ef span{margin-right:auto;font-size:13px;color:var(--mut)}
+.etb button[aria-pressed=true]{background:var(--acc);color:var(--on);border-color:var(--acc)}
+.em{overflow:auto;min-height:0;flex:1;padding:8px 22px 22px;display:grid;gap:10px;align-content:start}
+.em h4{margin:20px 0 0;font:500 12px "JetBrains Mono",monospace;letter-spacing:.16em;color:var(--acc);text-transform:uppercase}
+.em textarea{min-height:0;resize:vertical;padding:9px 12px;border-radius:10px;font-size:15px}
+.em select,.em input[type=file]{font:400 15px Archivo,sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 12px;width:100%}
+.em details{border:1px solid var(--line);border-radius:14px;padding:12px 16px;display:grid;gap:10px;background:var(--card)}.em summary{cursor:pointer;font-weight:800}
+.em .lf{display:grid;gap:6px}
+.em .lrow{display:flex;gap:8px;align-items:center;justify-content:space-between;font:500 12px "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--mut)}
+.em .lrow .btn{padding:5px 12px;font-size:11px;letter-spacing:.06em}
+.em .lf.xd textarea{opacity:.45;text-decoration:line-through}
+.em .xbx{display:grid;gap:10px;border:1px dashed var(--line);border-radius:14px;padding:12px;background:var(--bg)}
+.em .xbx h4{margin:0}
+.em .xrow{display:flex;gap:8px;flex-wrap:wrap}.em .xrow label{flex:1 1 200px}
+.em .xl{display:grid;gap:10px}
+.em .xi{display:grid;gap:8px;border:1px solid var(--line);border-radius:12px;padding:10px;background:var(--card)}
+.em .xe{margin:0;font-size:13px;color:var(--mut)}
+
+</style>
+<button id="eb" type="button" hidden="">✎ EDITAR</button>
+<dialog id="ed" aria-label="Editar portafolio"><div class="eh"><b>Editar portafolio</b><button class="btn s" id="ex" type="button">CERRAR</button></div>
+<div class="etb"><button class="btn s" data-t="p1" aria-pressed="true" type="button">TEXTOS</button><button class="btn s" data-t="p2" aria-pressed="false" type="button">MUESTRAS</button><button class="btn s" data-t="p3" aria-pressed="false" type="button">SHOWREEL Y COMPARADOR</button><button class="btn s" data-t="p4" aria-pressed="false" type="button">FAQ, FOTO Y REDES</button><button class="btn s" data-t="p5" aria-pressed="false" type="button">PLANES</button></div>
+<div class="em" id="p1"></div><div class="em" id="p2" hidden=""></div><div class="em" id="p3" hidden=""></div><div class="em" id="p4" hidden=""></div><div class="em" id="p5" hidden=""></div>
+<div class="ef" id="ef"><span id="es" role="status"></span><button class="btn s" id="ecd" type="button">DESCARTAR CAMBIOS</button><button class="btn s" id="epv" type="button">VISTA PREVIA</button><button class="btn s" id="el" type="button">LANZAR PORTAFOLIO</button><button class="btn p s" id="esv" type="button">GUARDAR CAMBIOS</button></div>
+<div class="ef" id="cf" hidden=""><span style="font-size:14px;color:var(--ink)">Se publicará la versión final y el modo edición se borrará para siempre. ¿Confirmas?</span><button class="btn s" id="cn" type="button">VOLVER</button><button class="btn p s" id="cy" type="button">SÍ, LANZAR</button></div></dialog>
+<script>
+window.ED=function(c){
+const $=id=>document.getElementById(id),d=$('ed'),st=$('es'),G={h:'Cabecera',x:'Inicio',top:'Inicio',m:'Franja deslizante',muestras:'Muestras','antes-despues':'Antes y después',planes:'Planes',proceso:'Proceso',cupos:'Primeros 3 cupos','sobre-mi':'Sobre mí',miniaturas:'Miniaturas ilustradas',faq:'Preguntas frecuentes',pic:'Foto de Sobre mí',contacto:'Contacto',f:'Pie'};
+const A='<!-'+'-ED-->',B='<!-'+'-/ED-->';
+const build=l=>{let h=c.SRC.replace(/(<script id="st" type="application\/json">)[\s\S]*?(<\/script>)/,(m,a,b)=>a+JSON.stringify(c.S).replace(/</g,'\\u003c')+b);
+if(l){let i;while((i=h.indexOf(A))>-1){const j=h.indexOf(B,i);h=h.slice(0,i)+h.slice(j+B.length)}}
+const sa='<!-'+'-SEO-->',sb='<!-'+'-/SEO-->',si=h.indexOf(sa),sj=h.indexOf(sb),t=c.esc(c.S.seo.title),d=c.esc(c.S.seo.desc);
+if(si>-1&&sj>si)h=h.slice(0,si+sa.length)+`\n<title>${t}</title>\n<meta name="description" content="${d}">\n<meta property="og:type" content="website">\n<meta property="og:locale" content="es_CL">\n<meta property="og:title" content="${t}">\n<meta property="og:description" content="${d}">\n<meta name="twitter:card" content="summary">\n`+h.slice(sj);
+return '<!DOCTYPE html>'+h};
+const D=JSON.parse(JSON.stringify({smp:c.S.smp,reel:c.S.reel,cmp:c.S.cmp,faq:c.S.faq,soc:c.S.soc,photo:c.S.photo,seo:c.S.seo,an:c.S.an,pl:c.S.pl,x:c.S.x,del:c.S.del}));D.pl=D.pl||[];D.x=D.x||[];D.del=D.del||[];D.bt=c.BS.map(q=>(document.querySelector(q)||{}).textContent||'');let DR=null;try{DR=JSON.parse(localStorage.getItem('pf_draft')||'null');if(DR&&DR.D)Object.assign(D,DR.D);else DR=null}catch(_){DR=null}
+const webp=async fl=>{try{if(!/^image\/(png|jpeg)$/.test(fl.type))return fl;const im=await createImageBitmap(fl),s=Math.min(1,1600/im.width),cv=document.createElement('canvas');cv.width=Math.round(im.width*s);cv.height=Math.round(im.height*s);cv.getContext('2d').drawImage(im,0,0,cv.width,cv.height);const b=await new Promise(r=>cv.toBlob(r,'image/webp',.85));return b&&b.type==='image/webp'?new File([b],fl.name.replace(/\.\w+$/,'')+'.webp',{type:'image/webp'}):fl}catch(_){return fl}};
+const mk=(o,k,l,t)=>{const L=document.createElement('label');L.append(l);let x;
+if(t==='s'||t==='s2'){x=document.createElement('select');(t==='s'?['Proyecto personal','Ejercicio de edición','Trabajo para cliente']:['Shorts / Reels','Videos largos','Highlights de streams','Clip de prueba gratuito','Otro']).forEach(v=>x.add(new Option(v)))}
+else{x=document.createElement(t==='a'?'textarea':'input');if(t==='a')x.rows=2}
+x.value=o[k]||'';x.oninput=x.onchange=()=>{o[k]=x.value};L.append(x);
+if(t&&t[0]==='u'){const f=document.createElement('input');f.type='file';f.accept=t==='uv'?'video/*':'image/*';
+f.onchange=async()=>{if(!f.files[0])return;st.textContent='Subiendo…';try{const a=await claude.use('assets');if(!a)throw 0;const r=await a.upload(t==='ui'?await webp(f.files[0]):f.files[0]);x.value=o[k]=r.url;st.textContent='Archivo subido.'}catch(e){st.textContent='No se pudo subir (máx. 20 MB, solo editores).'}};L.append(f)}
+return L};
+const h4x=t=>{const h=document.createElement('h4');h.textContent=t;return h},p1=$('p1'),ml=document.createElement('label');ml.innerHTML='CORREO DONDE RECIBIR LOS MENSAJES<input id="em1" type="email">';const sl=document.createElement('label');sl.innerHTML='CUPOS DE PRUEBA GRATUITA DISPONIBLES (NÚMERO)<input id="sl1" type="number" min="0" max="99">';const gd=n=>{const e=document.createElement('details'),y=document.createElement('summary');y.textContent=n;e.append(y);p1.append(e);return e};gd('Datos generales, SEO y analítica').append(ml,sl,mk(D.seo,'title','TÍTULO DE LA PÁGINA (SEO)'),mk(D.seo,'desc','DESCRIPCIÓN PARA BUSCADORES (~150 CARACTERES)','a'),mk(D.an,'ga','ID DE GOOGLE ANALYTICS 4, OPCIONAL (G-XXXXXXXXXX). SOLO FUNCIONA SI PUBLICAS ESTE HTML FUERA DE CLAUDE.AI: AQUÍ EL NAVEGADOR BLOQUEA A GOOGLE'));$('em1').value=c.S.mail;$('sl1').value=c.S.slots==null?3:c.S.slots;
+let g='',cur;const T={};
+const kd=el=>el.matches('h1,h2,.mi-l1,.mi-l2')?'Título principal':el.matches('h3')?'Subtítulo':el.matches('.sub,.lead')?'Descripción':el.matches('.eb')?'Etiqueta':'Texto';
+const xb=(t,f)=>{const b=document.createElement('button');b.type='button';b.className='btn s';b.textContent=t;if(f)b.onclick=f;return b};
+const chg=()=>d.dispatchEvent(new Event('change'));
+const TY=[['h','Título'],['s','Subtítulo'],['p','Texto']],PS=[['start','Al inicio de la sección'],['title','Debajo del título de la sección'],['end','Al final de la sección']],DF={h:'end',s:'title',p:'end'},NT={h:'Nuevo título',s:'Nuevo subtítulo',p:'Nuevo texto'};
+const sel=(o,k,l,opts)=>{const L=document.createElement('label');L.append(l);const s=document.createElement('select');opts.forEach(([v,n])=>s.add(new Option(n,v)));s.value=o[k];s.onchange=()=>{o[k]=s.value};L.append(s);return L};
+const blocks=(det,sid)=>{const top=document.createElement('div'),hd=document.createElement('h4'),row=document.createElement('div'),list=document.createElement('div');top.className='xbx';row.className='xrow';list.className='xl';hd.textContent='Añadir a esta sección';
+const rx=()=>{list.innerHTML='';const arr=D.x.filter(b=>b.sec===sid);arr.forEach((b,j)=>{const it=document.createElement('div'),r1=document.createElement('div'),r2=document.createElement('div'),L=document.createElement('label'),ta=document.createElement('textarea');it.className='xi';r1.className='xrow';r2.className='xrow';
+r1.append(sel(b,'t','Tipo',TY),sel(b,'pos','Ubicación',PS));ta.rows=2;ta.value=b.txt||'';ta.oninput=()=>{b.txt=ta.value};L.append('Contenido',ta);
+const mv=dr=>{const o=arr[j+dr];if(!o)return;const a=D.x.indexOf(b),z=D.x.indexOf(o);D.x[a]=o;D.x[z]=b;rx();chg()};
+r2.append(xb('↑ SUBIR',()=>mv(-1)),xb('↓ BAJAR',()=>mv(1)),xb('ELIMINAR',()=>{D.x.splice(D.x.indexOf(b),1);rx();chg()}));it.append(r1,L,r2);list.append(it)});
+if(!arr.length){const e=document.createElement('p');e.className='xe';e.textContent='Aún no has añadido nada aquí.';list.append(e)}};
+TY.forEach(([t,n])=>row.append(xb('+ '+n.toUpperCase(),()=>{D.x.push({id:'x_'+Math.random().toString(36).slice(2,8),sec:sid,t,pos:DF[t],txt:NT[t]});rx();chg()})));
+top.append(hd,row,list);det.append(top);rx()};
+c.E.forEach((el,i)=>{if(el.closest('.pl'))return;const k=c.K[i],sid=k.split(':')[0],n=G[sid]||'Otros';if(n!==g){g=n;cur=gd(n);if(c.XS.includes(sid))blocks(cur,sid)}
+const l=document.createElement('div'),hr=document.createElement('div'),lb=document.createElement('label'),t=document.createElement('textarea'),db=xb('');l.className='lf';hr.className='lrow';t.id='tx_'+i;lb.htmlFor=t.id;t.value=el.textContent;t.rows=Math.max(1,Math.ceil(t.value.length/70));
+const ap=()=>{const x=D.del.includes(k);db.textContent=x?'RESTAURAR':'ELIMINAR';l.classList.toggle('xd',x);t.readOnly=x;lb.textContent=kd(el)+(x?' · ELIMINADO (no se mostrará)':'')};
+db.onclick=()=>{const j=D.del.indexOf(k);if(j>-1)D.del.splice(j,1);else D.del.push(k);ap();chg()};ap();hr.append(lb,db);l.append(hr,t);cur.append(l);T[k]=t});
+const bt=t=>{const b=document.createElement('button');b.type='button';b.className='btn s';b.textContent=t;return b};
+const BN=['Botón del menú','Botón principal del hero','Botón secundario del hero','Botón de la prueba gratuita','Botón de media kit','Botón de envío del formulario','Botón de encargar miniatura'],gb=gd('Botones');D.bt.forEach((v,i)=>gb.append(mk(D.bt,i,BN[i]||'Botón '+(i+1))));
+if(DR){for(const k in(DR.t||{}))if(T[k])T[k].value=DR.t[k];if(DR.mail)$('em1').value=DR.mail;if(DR.slots!=null)$('sl1').value=DR.slots;st.textContent='Se recuperó un borrador sin guardar.'}
+const P2=$('p2'),rs=()=>{P2.innerHTML='';D.smp.forEach((m,i)=>{const e=document.createElement('details'),y=document.createElement('summary');y.textContent=(i+1)+'. '+(m.title||'Sin título')+(i?' · 9:16':' · 16:9');e.append(y);
+[['title','Título'],['cat','Categoría'],['dur','Duración'],['type','Tipo de proyecto','s'],['desc','Descripción breve','a'],['src','Video (URL https o subir archivo)','uv'],['thumb','Miniatura (URL https o subir imagen)','ui'],['problem','Problema original','a'],['work','Trabajo realizado','a'],['goal','Objetivo','a'],['vtt','Subtítulos .vtt (URL https, opcional)']].forEach(([k,l,t])=>e.append(mk(m,k,l,t)));
+const x=bt('ELIMINAR ESTA MUESTRA');x.onclick=()=>{D.smp.splice(i,1);rs()};e.append(x);P2.append(e)});
+const a=bt('+ AÑADIR MUESTRA');a.onclick=()=>{D.smp.push({cat:'CATEGORÍA',title:'Nueva muestra',dur:'[mm:ss]',type:'Proyecto personal',desc:'',src:'',thumb:'',problem:'',work:'',goal:''});rs()};P2.append(a)};rs();
+const P3=$('p3');[['Showreel',D.reel,[['src','Video del showreel (15–30 s)','uv'],['poster','Miniatura del showreel','ui']]],['Comparador antes y después',D.cmp,[['before','Video ORIGINAL','uv'],['bp','Miniatura original','ui'],['after','Video EDITADO','uv'],['ap','Miniatura editado','ui'],['lb','Etiqueta 1 (ANTES)'],['la','Etiqueta 2 (DESPUÉS)']]]].forEach(([n,o,f])=>{const h=document.createElement('h4');h.textContent=n;P3.append(h);f.forEach(([k,l,t])=>P3.append(mk(o,k,l,t)))});
+const P4=$('p4'),h4=t=>{const h=document.createElement('h4');h.textContent=t;return h};
+const rf=()=>{P4.innerHTML='';P4.append(h4('Foto de Sobre mí'),mk(D.photo,'src','Foto (URL https o subir imagen)','ui'),h4('Redes (solo se muestran las que tengan enlace https://)'));D.soc.forEach(o=>P4.append(mk(o,'u',o.n)));P4.append(h4('Preguntas frecuentes'));
+D.faq.forEach((f,i)=>{const e=document.createElement('details'),y=document.createElement('summary');y.textContent=(i+1)+'. '+(f.q||'Sin pregunta');e.append(y,mk(f,'q','Pregunta'),mk(f,'a','Respuesta','a'));const x=bt('ELIMINAR PREGUNTA');x.onclick=()=>{D.faq.splice(i,1);rf()};e.append(x);P4.append(e)});
+const a=bt('+ AÑADIR PREGUNTA');a.onclick=()=>{D.faq.push({q:'Nueva pregunta',a:''});rf()};P4.append(a)};rf();
+document.querySelectorAll('.etb button').forEach(b=>b.onclick=()=>{['p1','p2','p3','p4','p5'].forEach(p=>$(p).hidden=p!==b.dataset.t);document.querySelectorAll('.etb button').forEach(x=>x.setAttribute('aria-pressed',x===b))});
+const back=()=>{$('cf').hidden=true;$('ef').hidden=false};
+const DK='pf_draft',sync=()=>{c.S.mail=$('em1').value.trim()||c.S.mail;c.S.slots=Math.max(0,parseInt($('sl1').value)||0);for(const k in T)c.S.t[k]=T[k].value;Object.assign(c.S,D)};
+const pub=async l=>{st.textContent='Publicando…';
+if(D.an.ga&&!/^G-[A-Z0-9]{6,12}$/.test(D.an.ga)){back();st.textContent='ID de Analytics no válido (formato G-XXXXXXXXXX).';return}
+const bad=[...D.smp.flatMap(m=>[m.src,m.thumb,m.vtt]),D.reel.src,D.reel.poster,D.cmp.before,D.cmp.after,D.cmp.bp,D.cmp.ap,D.photo.src,...D.soc.map(o=>o.u)].find(u=>u&&!c.safe(u));
+if(D.cmp.before&&D.cmp.before===D.cmp.after){back();st.textContent='El video original y el editado no pueden ser el mismo archivo.';return}if(bad){back();st.textContent='URL no válida (usa https:// o sube el archivo): '+bad.slice(0,30);return}
+try{const a=window.claude&&await claude.use('artifact');if(!a)throw 0;sync();await a.publish(build(l));try{localStorage.removeItem(DK)}catch(_){}}catch(e){back();st.textContent='No se pudo publicar. Solo el dueño o editores pueden hacerlo.'}};
+const P5=$('p5'),rp=()=>{P5.innerHTML='';D.pl.forEach((p,i)=>{const e=document.createElement('details'),y=document.createElement('summary');y.textContent=(i+1)+'. '+(p.n||'Plan');e.append(y);
+[['n','Nombre del plan'],['b','Etiqueta promocional (opcional)'],['p','Precio'],['u','Periodicidad o detalle del precio'],['c','Texto del botón'],['s','Servicio que preselecciona en el formulario','s2']].forEach(([k,l,t])=>e.append(mk(p,k,l,t)));
+const L=document.createElement('label');L.append('Entregables y condiciones (uno por línea)');const ta=document.createElement('textarea');ta.rows=5;ta.value=(p.f||[]).join('\n');ta.oninput=()=>{p.f=ta.value.split('\n').map(s=>s.trim()).filter(Boolean)};L.append(ta);e.append(L);
+const K2=document.createElement('label'),ck=document.createElement('input');ck.type='checkbox';ck.checked=!!p.hl;ck.style.width='auto';ck.onchange=()=>{p.hl=ck.checked};K2.append(ck,' Plan destacado (fondo de color)');e.append(K2);
+const x=bt('ELIMINAR ESTE PLAN');x.onclick=()=>{D.pl.splice(i,1);rp()};e.append(x);P5.append(e)});
+const a=bt('+ AÑADIR PLAN');a.onclick=()=>{D.pl.push({b:'',n:'Nuevo plan',p:'',u:'',f:[],c:'RESERVAR CUPO',s:'Otro',hl:0});rp()};P5.append(a)};rp();
+let tm;['input','change'].forEach(n=>d.addEventListener(n,()=>{clearTimeout(tm);tm=setTimeout(()=>{try{sync();localStorage.setItem(DK,JSON.stringify({t:c.S.t,mail:c.S.mail,slots:c.S.slots,D}));st.textContent='Borrador guardado en este navegador.'}catch(_){}},600)}));
+$('ecd').onclick=()=>{try{localStorage.removeItem(DK)}catch(_){}location.reload()};
+$('epv').onclick=()=>{try{sync();const u=URL.createObjectURL(new Blob([build(1)],{type:'text/html'}));if(!window.open(u,'_blank'))st.textContent='El navegador bloqueó la vista previa: permite ventanas emergentes.'}catch(_){st.textContent='No se pudo generar la vista previa.'}};
+const eb=$('eb');eb.onclick=()=>d.showModal();$('ex').onclick=()=>d.close();
+$('esv').onclick=()=>pub(0);$('el').onclick=()=>{$('ef').hidden=true;$('cf').hidden=false};$('cn').onclick=back;$('cy').onclick=()=>pub(1);
+if(window.claude)claude.use('user').then(u=>{if(u&&u.canEdit())eb.hidden=false}).catch(()=>{});
+};
+</script>
+<!--/ED-->
+<script id="st" type="application/json">{"t":{"h:1":"mAck","h:2":"VIDEO EDITOR","top:1":"SHOWREEL 2026 · LONG-FORM · SHORTS · STREAMS","top:2":"CORTES QUE NO DEJAN IRSE.","top:3":"Edito videos para YouTubers, streamers y creadores de contenido que quieren transformar sus grabaciones, directos e ideas en contenido que la gente realmente quiera ver. Desde videos largos hasta Shorts dinámicos.","top:4":"3","top:5":"FORMATOS: SHORTS, LONG-FORM Y HIGHLIGHTS","top:6":"48–72 H","top:7":"PLAZO ORIENTATIVO DE ENTREGA","top:8":"1","top:9":"REVISIÓN DE AJUSTES INCLUIDA","top:10":"$0","top:11":"PRIMERA PRUEBA GRATUITA","m:1":"SHORTS","m:2":"TIKTOK","m:3":"YOUTUBE","m:4":"REELS","m:5":"TWITCH","m:6":"HIGHLIGHTS","m:7":"LONG-FORM","m:8":"VIDEO EDITING","muestras:1":"MUESTRAS","antes-despues:1":"ANTES Y DESPUÉS","antes-despues:2":"Material original frente a la versión editada. Al alternar, el video continúa desde el mismo punto.","planes:1":"CÓMO TRABAJAMOS","planes:2":"Cupos mensuales limitados para que cada canal tenga tiempo real de edición.","planes:3":"OFERTA DE LANZAMIENTO","planes:4":"SHORTS PACK","planes:5":"$15 USD","planes:6":"por pack de 5 Shorts","planes:7":"5 Shorts de hasta 60 segundos","planes:8":"Subtítulos dinámicos","planes:9":"Efectos de sonido","planes:10":"Zooms y recursos visuales","planes:11":"Música cuando corresponda","planes:12":"1 ronda de ajustes","planes:13":"LONG-FORM","planes:14":"$30 USD","planes:15":"por video","planes:16":"1 video de hasta 15 minutos","planes:17":"Cortes y limpieza de audio","planes:18":"Música y efectos","planes:19":"Edición narrativa","planes:20":"1 ronda de ajustes","planes:21":"A TU MEDIDA","planes:22":"Cotización personalizada","planes:23":"precio según el alcance","planes:24":"Edición de streams","planes:25":"Highlights","planes:26":"Proyectos extensos","planes:27":"Paquetes personalizados","planes:28":"Precios y entregables son propuestas iniciales: los definitivos se confirman antes de comenzar el proyecto y pueden variar según la complejidad del material.","proceso:1":"PROCESO","proceso:2":"00:00","proceso:3":"BRIEF Y REFERENCIAS","proceso:4":"El cliente explica qué contenido hace, qué estilo busca y cuáles son sus objetivos.","proceso:5":"00:01","proceso:6":"PRIMERA VERSIÓN","proceso:7":"Se prepara una primera edición para revisar el ritmo, el estilo y la dirección del proyecto.","proceso:8":"00:02","proceso:9":"AJUSTES","proceso:10":"Se aplican los cambios acordados dentro de la ronda de revisión incluida.","proceso:11":"00:03","proceso:12":"EXPORTACIÓN Y ENTREGA","proceso:13":"Se entregan los archivos finales en los formatos y resoluciones acordados.","proceso:14":"Precio y entregables acordados antes de comenzar","proceso:15":"Sin costos sorpresa","proceso:16":"Revisiones definidas desde el principio","proceso:17":"Comunicación durante el proceso","cupos:1":"PRUEBA MI EDICIÓN. SIN PAGAR NADA.","cupos:2":"Te edito un fragmento de tu propio contenido para que puedas comprobar cómo trabajo antes de contratarme.","cupos:3":"¿QUÉ INCLUYE?","cupos:4":"Un clip de 20–30 segundos","cupos:5":"Subtítulos","cupos:6":"Edición dinámica","cupos:7":"Efectos sonoros","cupos:8":"Recursos visuales según el contenido","cupos:9":"CONDICIONES","cupos:10":"Un clip por creador","cupos:11":"El cliente proporciona el material original","cupos:12":"No incluye la edición completa de un video","cupos:13":"No existe obligación de contratar después","cupos:14":"Sujeta a disponibilidad de cupos","sobre-mi:1":"EDITO COMO SI FUERA MI PROPIO CANAL","sobre-mi:2":"Soy [tu nombre] y edito video para streamers y creadores. Empecé editando contenido para TikTok y hoy me enfoco en shorts, clips de directos y videos largos. Estoy construyendo mi lista de clientes, así que cada proyecto recibe mi atención completa: respondo rápido, entrego a tiempo y ajusto hasta que el corte funcione. Me importa que el espectador llegue al final del video.","contacto:1":"¿TU CANAL NECESITA UN EDITOR? PRUÉBAME GRATIS.","contacto:2":"Cuéntame qué publicas, cada cuánto y qué formato necesitas. Te respondo en menos de 24 horas con disponibilidad y una propuesta concreta.","pic:1":"EDITANDO DESDE [año real]","sobre-mi:5":"ESPECIALIDADES","sobre-mi:6":"Shorts y Reels","sobre-mi:7":"Videos de YouTube","sobre-mi:8":"Highlights de streams","sobre-mi:9":"Storytelling audiovisual","sobre-mi:10":"HERRAMIENTAS","sobre-mi:11":"[Herramienta 1]","sobre-mi:12":"[Herramienta 2]","sobre-mi:13":"[Herramienta 3]","faq:1":"QUIZA TE PREGUNTES...","f:1":"[Tu nombre]","f:2":"SHORTS · LONG-FORM · STREAMS","miniaturas:1":"ILUSTRACIÓN DIGITAL","miniaturas:2":"NO SOLO EDITO VIDEOS.","miniaturas:3":"TAMBIÉN LOS ILUSTRO.","miniaturas:4":"Miniaturas dibujadas a mano, diseñadas para darle personalidad a cada video.","miniaturas:5":"¿TIENES UN VIDEO EN MENTE?","miniaturas:6":"Hagamos que tu miniatura sea tan interesante como tu contenido.","miniaturas:7":"SERVICIOS DE MINIATURAS","sobre-mi:3":"No creo que editar un video consista simplemente en llenar la pantalla de efectos. Se trata de saber cuándo cortar, cuándo dejar respirar una escena y cómo mantener la atención sin sacrificar lo que hace interesante al contenido.","sobre-mi:4":"También dibujo manga, así que puedo sumar miniaturas ilustradas y emotes a tu canal.","proceso-ilustracion:1":"PROCESO DE ILUSTRACIÓN","proceso-ilustracion:2":"00:00","proceso-ilustracion:3":"IDEA Y REFERENCIAS","proceso-ilustracion:4":"El cliente cuenta de qué trata el video, qué título lleva y qué estilo o personajes quiere ver en la miniatura.","proceso-ilustracion:5":"00:01","proceso-ilustracion:6":"BOCETO","proceso-ilustracion:7":"Preparo un boceto rápido con la composición, la pose y la expresión para validar la dirección antes de entintar.","proceso-ilustracion:8":"00:02","proceso-ilustracion:9":"LÍNEA Y COLOR","proceso-ilustracion:10":"Limpio el trazo, aplico color, luces y contraste para que la miniatura destaque y se lea incluso en tamaño pequeño.","proceso-ilustracion:11":"00:03","proceso-ilustracion:12":"EXPORTACIÓN Y ENTREGA","proceso-ilustracion:13":"Se entrega la ilustración final en formato 16:9 (1280×720 px) lista para subir a tu canal.","proceso-ilustracion:14":"Boceto aprobado antes de entintar","proceso-ilustracion:15":"Formato 1280×720 px","proceso-ilustracion:16":"Revisiones definidas desde el principio","proceso-ilustracion:17":"Comunicación durante el proceso","cpic:1":"ESCRÍBEME"},"mail":"tu@correo.com","reel":{"src":"","poster":""},"cmp":{"before":"","after":"","bp":"","ap":"","lb":"ANTES","la":"DESPUÉS"},"smp":[{"cat":"HIGHLIGHTS","title":"Highlights de stream","dur":"[mm:ss]","type":"Proyecto personal","desc":"[Describe esta muestra]","src":"","thumb":"","problem":"[¿Qué necesitaba mejorar el material original?]","work":"[Qué decisiones y técnicas aplicaste]","goal":"[Qué querías conseguir con la edición]"},{"cat":"SHORT","title":"Short de gaming","dur":"[mm:ss]","type":"Proyecto personal","desc":"[Describe esta muestra]","src":"","thumb":"","problem":"[¿Qué necesitaba mejorar el material original?]","work":"[Qué decisiones y técnicas aplicaste]","goal":"[Qué querías conseguir con la edición]"},{"cat":"SHORT","title":"Short de streamer","dur":"[mm:ss]","type":"Proyecto personal","desc":"[Describe esta muestra]","src":"","thumb":"","problem":"[¿Qué necesitaba mejorar el material original?]","work":"[Qué decisiones y técnicas aplicaste]","goal":"[Qué querías conseguir con la edición]"},{"dur":"[mm:ss]","type":"Proyecto personal","desc":"[Describe esta muestra]","src":"","thumb":"","problem":"[¿Qué necesitaba mejorar el material original?]","work":"[Qué decisiones y técnicas aplicaste]","goal":"[Qué querías conseguir con la edición]","cat":"SHORT","title":"Short de YouTuber"}],"slots":3,"bt":["ESCRÍBEME","VER MI TRABAJO","CONSIGUE UN CLIP DE PRUEBA GRATIS","QUIERO MI CLIP GRATIS","DESCARGAR MEDIA KIT","","ENCARGAR UNA MINIATURA ↗"],"pl":[{"b":"OFERTA DE LANZAMIENTO","n":"SHORTS PACK","p":"$15 USD","u":"por pack de 5 Shorts","f":["5 Shorts de hasta 60 segundos","Subtítulos dinámicos","Efectos de sonido","Zooms y recursos visuales","Música cuando corresponda","1 ronda de ajustes"],"c":"RESERVAR CUPO","s":"Shorts / Reels","hl":1},{"b":"","n":"LONG-FORM","p":"$30 USD","u":"por video","f":["1 video de hasta 10 minutos","Cortes y limpieza de audio","Música y efectos","Edición narrativa","1 ronda de ajustes"],"c":"RESERVAR CUPO","s":"Videos largos","hl":0},{"b":"","n":"A TU MEDIDA","p":"Cotización personalizada","u":"precio según el alcance","f":["Edición de streams","Highlights","Proyectos extensos","Paquetes personalizados"],"c":"COTIZAR","s":"Otro","hl":0}],"faq":[{"q":"¿Trabajas con creadores pequeños?","a":"Sí. Trabajo con streamers y YouTubers que están creciendo, y por eso los cupos son limitados: así cada canal tiene tiempo real de edición."},{"q":"¿Puedo contratar una sola edición?","a":"Sí. Un video suelto entra en el plan A TU MEDIDA: cuéntame qué necesitas y te cotizo sin compromiso."},{"q":"¿Qué materiales debo proporcionarte?","a":"El material original en bruto (video o directo) y, si los tienes, referencias del estilo que buscas. [Añade aquí otros materiales que necesites: logos, música, tipografías…]"},{"q":"¿Cuánto tardas en editar?","a":"El plazo orientativo es de 48–72 h desde que recibo el material. Los plazos se acuerdan antes de comenzar."},{"q":"¿Cómo funcionan las revisiones?","a":"Recibes una primera versión con un enlace para dejar comentarios y aplico los cambios dentro de la ronda de ajustes incluida en cada plan."},{"q":"¿Trabajas con clientes fuera de Chile?","a":"[Indica aquí si trabajas con clientes de otros países y cómo coordinas la entrega.]"},{"q":"¿Cómo se realizan los pagos?","a":"[Define aquí tus medios y condiciones de pago.]"}],"photo":{"src":""},"soc":[{"n":"Instagram","u":""},{"n":"Twitter","u":""}],"cphoto":{"src":""},"seo":{"title":"[Tu nombre] · Editor de video para YouTubers y streamers en Chile","desc":"Editor de video en Chile para YouTubers y streamers: Shorts, clips de directos y videos largos con ritmo, subtítulos y hooks. Primer clip de prueba gratis."},"an":{"ga":""},"min":{"msg":"Hola, estoy interesado/a en contratar una miniatura ilustrada.","works":[{"id":"m_7fk2xq","n":"01","title":"Miniatura protagonista","cat":"Gaming","desc":"[Describe esta miniatura]","concept":"","tech":"","img":"","sketch":"","line":"","color":"","pub":1,"feat":1},{"id":"m_a83nd0","n":"02","title":"Miniatura #02","cat":"Gaming","desc":"[Describe esta miniatura]","concept":"","tech":"","img":"","sketch":"","line":"","color":"","pub":1,"feat":0},{"id":"m_q1w5ze","n":"03","title":"Miniatura #03","cat":"Gaming","desc":"[Describe esta miniatura]","concept":"","tech":"","img":"","sketch":"","line":"","color":"","pub":1,"feat":0},{"id":"m_x9c4vb","n":"04","title":"Miniatura #04","cat":"Anime","desc":"[Describe esta miniatura]","concept":"","tech":"","img":"","sketch":"","line":"","color":"","pub":1,"feat":0},{"id":"m_p6t2ly","n":"05","title":"Miniatura #05","cat":"Anime","desc":"[Describe esta miniatura]","concept":"","tech":"","img":"","sketch":"","line":"","color":"","pub":1,"feat":0},{"id":"m_d0r8ju","n":"06","title":"Miniatura #06","cat":"Entretenimiento","desc":"[Describe esta miniatura]","concept":"","tech":"","img":"","sketch":"","line":"","color":"","pub":1,"feat":0},{"id":"m_h5m3gk","n":"07","title":"Miniatura #07","cat":"Otros","desc":"[Describe esta miniatura]","concept":"","tech":"","img":"","sketch":"","line":"","color":"","pub":1,"feat":0}],"svc":[{"id":"s_b2n7qd","u":"por miniatura","n":"Miniatura ilustrada individual","d":"Ilustración digital y diseño de una miniatura personalizada.","p":"$25 USD","v":1,"hl":0,"b":"","s":"Miniatura ilustrada","m":"","c":"CONSULTAR"},{"id":"s_k8w3ra","u":"por pack de 5 miniaturas","n":"Pack de miniaturas","d":"Varias miniaturas para una serie de videos o un canal.","p":"$100 USD","v":1,"hl":0,"b":"","s":"Miniatura ilustrada","m":"Hola, me interesa un pack de miniaturas ilustradas.","c":"CONSULTAR"},{"id":"s_t4y9ez","u":"por video + miniatura","n":"Edición + miniatura","d":"Un servicio combinado que incluye la edición de un video y el diseño de su miniatura.","p":"$60 USD","v":1,"hl":1,"b":"SERVICIO COMBINADO","s":"Edición + miniatura","m":"Hola, estoy interesado/a en el servicio combinado de edición + miniatura.","c":"CONSULTAR"},{"id":"s_m5c1vh","u":"precio según el alcance","n":"Identidad visual para canales","d":"Desarrollo de una línea visual consistente para las miniaturas de un creador.","p":"Cotización personalizada","v":1,"hl":0,"b":"","s":"Otro","m":"Hola, me interesa desarrollar una identidad visual para las miniaturas de mi canal.","c":"COTIZAR"}]},"del":["sobre-mi:4"],"x":[]}</script>
+<script>
+(function(){const go=()=>{
+const $=id=>document.getElementById(id),SRC=document.documentElement.outerHTML.replace(/^<html[^>]*>/,'<html lang=\"es\">').replace(/<body[^>]*>/,'<body>').replace(new RegExp('<sty'+'le id=\"custom-cursor\"[\\s\\S]*?</sty'+'le>'),''),S=JSON.parse($('st').textContent);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const safe=u=>/^(https:\/\/|\/_blob\/)/.test(u||'')?u:'';
+const E=[...document.querySelectorAll('.logo span,.logo small,.eb,h1,h2,h3,.lead,.sub,.st b,.st span,.bd,.pr small,.pr b,.pl li,.tm,.pc p,.cup p,.cup li,.ab p,.tl span,.pic span,.mq span,footer .cp,footer .ft,.mi-l1,.mi-l2')],K=[],n={};
+E.forEach(el=>{const s=el.closest('.mq')?'m':el.closest('header')?'h':el.closest('footer')?'f':(el.closest('[id]')||{}).id||'x';n[s]=(n[s]||0)+1;K.push(s+':'+n[s])});
+E.forEach((el,i)=>{const v=S.t[K[i]];if(v==null)return;if(el.tagName==='H1')el.innerHTML=esc(v).replace(/(\S+)$/,'<em>$1</em>');else el.textContent=v});
+const XS=['muestras','antes-despues','planes','proceso','cupos','sobre-mi','miniaturas','faq','contacto'];
+(S.del||[]).forEach(k=>{const i=K.indexOf(k);if(i>-1)E[i].style.display='none'});
+(()=>{const xg={};(S.x||[]).forEach(b=>{const tx=String(b.txt||'').trim();if(!tx||!XS.includes(b.sec)||!$(b.sec))return;const el=document.createElement(b.t==='h'?'h2':b.t==='s'?'h3':'p');el.className='xb x'+(b.t==='h'||b.t==='s'?b.t:'p');el.textContent=b.txt;const o=xg[b.sec]=xg[b.sec]||{};(o[b.pos]=o[b.pos]||[]).push(el)});
+for(const id in xg){const sec=$(id),o=xg[id],fr=a=>{const f=document.createDocumentFragment();a.forEach(e=>f.append(e));return f},hd=[...sec.children].find(x=>x.matches('.hd,.mi-intro'));
+if(o.start)sec.prepend(fr(o.start));if(o.title){const f=fr(o.title),an=hd||(o.start&&o.start[o.start.length-1]);an?an.after(f):sec.prepend(f)}if(o.end)sec.append(fr(o.end))}})();
+const BS=['header .btn.p','.hero .btn.p','.hero .btn:not(.p)','#cupos .btn','#mkb','form .btn.p','#mi-btn'];
+BS.forEach((q,i)=>{const e=document.querySelector(q),v=(S.bt||[])[i];if(e&&v)e.textContent=v});
+if(S.pl){const g=$('pg');g.innerHTML=S.pl.map(p=>`<article class="pl fc${p.hl?' hl':''}"><div class="fi"><div class="face ff">${p.b?`<span class="bd">${esc(p.b)}</span>`:''}<h3>${esc(p.n)}</h3><div class="pr"><b>${esc(p.p)}</b><small>${esc(p.u)}</small></div><button class="btn s fl" type="button" aria-expanded="false">VER QUÉ INCLUYE ↻</button></div><div class="face fb" inert><span class="eb">QUÉ INCLUYE</span><ul>${(p.f||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul><div class="bt"><a class="btn ${p.hl?'inv':'p'}" href="#contacto" data-svc="${esc(p.s)}">${esc(p.c)}</a><button class="btn s fv" type="button">↺ VOLVER</button></div></div></div></article>`).join('');
+var FL=g=>{const sf=(c,on,f)=>{c.classList.toggle('on',on);c.querySelector('.ff').inert=on;c.querySelector('.fb').inert=!on;c.querySelector('.fl').setAttribute('aria-expanded',on);if(f)c.querySelector(on?'.fv':'.fl').focus({preventScroll:true})};
+g.addEventListener('click',e=>{const t=e.target.closest('.fl,.fv,.ff');if(t)sf(t.closest('.fc'),!t.classList.contains('fv'),1)});
+g.querySelectorAll('.fc').forEach(c=>{c.onpointerenter=e=>{if(e.pointerType==='mouse')sf(c,true,0)};c.onpointerleave=e=>{if(e.pointerType==='mouse'&&!c.querySelector(':focus-visible'))sf(c,false,0)};if(!matchMedia('(prefers-reduced-motion:reduce)').matches)c.onpointermove=e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)/r.width*100+'%');c.style.setProperty('--my',(e.clientY-r.top)/r.height*100+'%')}})};FL(g)}
+const m=document.querySelector('.mq div');m.innerHTML+=m.innerHTML;
+document.addEventListener('play',e=>document.querySelectorAll('video').forEach(v=>v!==e.target&&v.pause()),true);
+const r=S.reel,R=$('reel'),rs=safe(r.src),rp=safe(r.poster);
+R.innerHTML=(rp?`<img src="${esc(rp)}" alt="Miniatura del showreel" width="290" height="516" loading="lazy">`:'')+(rs?'<button class="pb" type="button" aria-label="Reproducir showreel">▶</button>':'<span class="pend">SHOWREEL PRÓXIMAMENTE</span>');
+if(rs)R.querySelector('.pb').onclick=()=>{track('play_showreel');R.innerHTML=`<video src="${esc(rs)}" poster="${esc(rp)}" controls playsinline autoplay></video>`};
+$('cnt').textContent=S.smp.length+' muestras · 2026';
+const card=(m,i)=>{const w=i===0;return `<article class="c"><button class="th ${w?'w':'v'}" type="button" data-i="${i}" aria-label="Ver muestra: ${esc(m.title)}" style="--a:${(i*47+120)%360}deg">${safe(m.thumb)?`<img src="${esc(m.thumb)}" alt="" loading="lazy" decoding="async" width="${w?640:360}" height="${w?360:640}">`:''}<span class="tag">${esc(m.cat)}</span>${safe(m.src)?'<i>▶</i>':'<span class="pend">PRÓXIMAMENTE</span>'}<span class="dur">${esc(m.dur)}</span></button><div class="cb"><small>${esc(m.type)}</small><h3>${esc(m.title)}</h3><p>${esc(m.desc)}</p></div></article>`};
+$('sg').innerHTML=S.smp.length?`<div class="sw">${card(S.smp[0],0)}</div>`+(S.smp.length>1?`<div class="sv">${S.smp.slice(1).map((m,i)=>card(m,i+1)).join('')}</div>`:''):'';
+const vm=$('vm'),vb=$('vb');
+$('sg').onclick=e=>{const b=e.target.closest('.th');if(!b)return;const m=S.smp[b.dataset.i],s=safe(m.src);
+vb.innerHTML=`<h3>${esc(m.title)}</h3><small>${esc(m.cat)} · ${esc(m.dur)} · ${esc(m.type)}</small>${s?`<video src="${esc(s)}" poster="${esc(safe(m.thumb))}" controls playsinline preload="metadata">${safe(m.vtt)?`<track kind="captions" src="${esc(m.vtt)}" srclang="es" label="Español" default>`:''}</video>`:'<p class="pend">Muestra próximamente: aún no hay video.</p>'}<dl><dt>Problema original</dt><dd>${esc(m.problem)}</dd><dt>Trabajo realizado</dt><dd>${esc(m.work)}</dd><dt>Objetivo</dt><dd>${esc(m.goal)}</dd></dl>`;vm.showModal();track('open_sample',{sample:m.title})};
+vm.onclose=()=>{vb.innerHTML=''};vm.onclick=e=>{if(e.target===vm)vm.close()};$('vx').onclick=()=>vm.close();
+const c=S.cmp,CB=safe(c.before),CA=safe(c.after),CM=$('cmp');
+if(!CB||!CA||CB===CA)CM.innerHTML='<p class="pend cp">Comparación próximamente: aún no hay un original y una versión editada distintos.</p>';
+else{CM.innerHTML=`<div class="tg2" role="group" aria-label="Versión del video"><button class="btn s" type="button" data-v="b" aria-pressed="false">${esc(c.lb||'ANTES')}</button><button class="btn s" type="button" data-v="a" aria-pressed="true">${esc(c.la||'DESPUÉS')}</button></div><div class="cv"><video controls playsinline preload="none" src="${esc(CB)}" poster="${esc(safe(c.bp))}" hidden></video><video controls playsinline preload="none" src="${esc(CA)}" poster="${esc(safe(c.ap))}"></video></div>`;
+const V=CM.querySelectorAll('video'),vs={b:V[0],a:V[1]};let cur='a';
+CM.querySelectorAll('.tg2 button').forEach(b=>b.onclick=()=>{const k=b.dataset.v;if(k===cur)return;const o=vs[cur],w=vs[k],t=o.currentTime,p=!o.paused;o.pause();o.hidden=true;w.hidden=false;try{w.currentTime=t}catch(_){}if(p)w.play();cur=k;CM.querySelectorAll('.tg2 button').forEach(x=>x.setAttribute('aria-pressed',x===b))})}
+const pic=$('pic'),ph=safe(S.photo.src);if(ph){pic.querySelector('.pf').remove();const im=new Image();im.src=ph;im.alt='Retrato del editor';im.width=480;im.height=600;im.loading='lazy';pic.prepend(im)}
+const MN=S.min||{},mw=(MN.works||[]).filter(w=>w.pub!==0&&w.pub!==false),mf=mw.find(w=>w.feat)||null,mr=mw.filter(w=>w!==mf);
+const mimg=(w,x)=>`<div class="mi-img" style="--a:${((parseInt(w.n,10)||1)*47)%360+120}deg">${safe(w.img)?`<img src="${esc(w.img)}" alt="${esc(w.title)} — miniatura ilustrada" loading="lazy" decoding="async" width="1280" height="720">`:`<span class="mi-ph" role="img" aria-label="Espacio reservado para la miniatura: ${esc(w.title)}"><b aria-hidden="true">✎</b><span>TU ILUSTRACIÓN AQUÍ</span><small>16:9 · 1280×720 PX</small></span>`}${x||''}</div>`;
+$('mfeat').innerHTML=mf?`<div class="mi-feat mi-r" data-id="${esc(mf.id)}" role="group" aria-label="Miniatura destacada: ${esc(mf.title)}"><div class="mi-fr">${mimg(mf,'<span class="tag">PIEZA PRINCIPAL</span><div class="mi-cap"><small>'+esc(mf.cat)+' · #'+esc(mf.n)+'</small><b>'+esc(mf.title)+'</b></div>')}</div></div>`:'';
+$('mgal').innerHTML=mr.map((w,i)=>`<article class="c mc mi-r" data-id="${esc(w.id)}" style="--d:${(i%3)*80}ms">${mimg(w,'<span class="tag">#'+esc(w.n)+'</span>')}<div class="cb"><small>${esc(w.cat)}</small><h3>${esc(w.title)}</h3><p>${esc(w.desc)}</p></div></article>`).join('');
+const msv=(MN.svc||[]).filter(v=>v.v!==0&&v.v!==false);
+$('msvc').innerHTML=msv.map((v,i)=>`<article class="pl fc${v.hl?' hl':''} mi-r" style="--d:${i*70}ms"><div class="fi"><div class="face ff">${v.b?`<span class="bd">${esc(v.b)}</span>`:''}<h3>${esc(v.n)}</h3><div class="pr"><b>${esc(v.p||'[Precio]')}</b>${v.u?`<small>${esc(v.u)}</small>`:''}</div><button class="btn s fl" type="button" aria-expanded="false">VER DESCRIPCIÓN ↻</button></div><div class="face fb" inert><span class="eb">DESCRIPCIÓN</span><p>${esc(v.d)}</p><div class="bt"><a class="btn ${v.hl?'inv':'p'}" href="#contacto" data-svc="${esc(v.s||'Otro')}" data-msg="${esc(v.m||MN.msg||'')}">${esc(v.c||'CONSULTAR')}</a><button class="btn s fv" type="button">↺ VOLVER</button></div></div></div></article>`).join('');if(typeof FL==='function')FL($('msvc'));
+if(!msv.length)document.querySelector('.mi-sh').style.display='none';
+$('mi-btn').dataset.msg=MN.msg||'';
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches&&'IntersectionObserver' in window){document.documentElement.classList.add('rv');const ro=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.mi-r').forEach(el=>ro.observe(el))}
+$('fq').innerHTML=S.faq.map(f=>`<details class="fq"><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('');
+const lk=[['✉ Correo','mailto:'+S.mail],...S.soc.filter(o=>safe(o.u)).map(o=>[o.n,o.u])].map(([n,u])=>`<a href="${esc(u)}"${u[0]==='m'?'':' target="_blank" rel="noopener noreferrer"'}>${esc(n)}</a>`).join('');
+const gl=n=>safe(((S.soc||[]).find(o=>o.n===n)||{}).u),BB=[['INSTAGRAM ↗',gl('Instagram')],['TWITTER ↗',gl('Twitter')],['✉ CORREO ELECTRÓNICO','mailto:'+S.mail]];$('soc').innerHTML=BB.map(([t,u])=>`<a class="btn p cl" href="${esc(u||'#contacto')}"${u&&u[0]==='h'?' target="_blank" rel="noopener noreferrer"':''}>${t}</a>`).join('');const cp=$('cpic'),cph=safe((S.cphoto||{}).src);if(cph){cp.querySelector('.pf').remove();const ci=new Image();ci.src=cph;ci.alt='Foto de contacto';ci.width=480;ci.height=600;ci.loading='lazy';cp.prepend(ci)}$('fsoc').innerHTML=lk;$('yr').textContent=new Date().getFullYear();
+$('mkb').onclick=()=>{const q=x=>[...document.querySelectorAll(x)],T=x=>(document.querySelector(x)||{}).textContent||'',li=a=>'<ul>'+a.map(l=>`<li>${esc(l)}</li>`).join('')+'</ul>';
+$('mk').innerHTML=`<h1>${esc(T('.logo span'))}</h1><p class="k">${esc(T('.logo small'))}</p><p>${esc(T('.lead'))}</p><h2>Especialidades</h2>${li([...q('#sobre-mi .tl')[0].children].map(x=>x.textContent))}<h2>Servicios y precios iniciales</h2>${q('.pl').map(p=>`<h3>${esc(p.querySelector('h3').textContent)} — ${esc(p.querySelector('.pr b').textContent)} ${esc((p.querySelector('.pr small')||{}).textContent||'')}</h3>${li([...p.querySelectorAll('li')].map(x=>x.textContent))}`).join('')}<p>${esc(q('#planes .sub').pop().textContent)}</p><h2>Muestras</h2>${li(S.smp.map(m=>m.title+' · '+m.cat+' · '+m.dur+' · '+m.type))}<h2>Contacto</h2><p>${esc(S.mail)}</p><p>${S.soc.filter(o=>safe(o.u)).map(o=>esc(o.n+': '+o.u)).join('<br>')}</p><p>Portafolio: ${esc(location.href.split('#')[0])}</p>`;track('download_mediakit');window.print()};
+const gid=(S.an||{}).ga||'',DNT=navigator.doNotTrack==='1',ok=/^G-[A-Z0-9]{6,12}$/.test(gid)&&!DNT;window.dataLayer=window.dataLayer||[];
+function gt(){dataLayer.push(arguments)}
+if(ok){const sc=document.createElement('script');sc.async=true;sc.src='https://www.googletagmanager.com/gtag/js?id='+gid;document.head.append(sc);gt('js',new Date());gt('config',gid,{anonymize_ip:true})}
+const track=(n,o)=>{if(ok)gt('event',n,o||{})},ev=(q,n)=>document.querySelectorAll(q).forEach(a=>a.addEventListener('click',()=>track(n)));
+ev('.hero .btn.p','click_ver_mi_trabajo');ev('.hero .btn:not(.p)','click_prueba_gratuita');ev('#cupos .btn','click_prueba_gratuita');ev('.pl a.btn','click_contratar');ev('#miniaturas a.btn','click_miniaturas');
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){track('view_planes');o.disconnect()}}).observe($('planes'));
+document.querySelectorAll('.pl').forEach(p=>{const b=p.querySelector('a.btn');b&&b.setAttribute('aria-label',b.textContent+' — '+p.querySelector('h3').textContent)});
+const mn=$('mn'),nv=document.querySelector('.nav nav'),cl=()=>{nv.classList.remove('open');mn.setAttribute('aria-expanded','false')};
+mn.onclick=()=>{mn.setAttribute('aria-expanded',nv.classList.toggle('open'))};nv.addEventListener('click',e=>{if(e.target.closest('a'))cl()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nv.classList.contains('open')){cl();mn.focus()}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nv.querySelectorAll('a').forEach(a=>{if(a.getAttribute('href')==='#'+e.target.id)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')})}),{rootMargin:'-45% 0px -50% 0px'});
+['muestras','planes','proceso','sobre-mi','miniaturas','faq'].forEach(i=>io.observe($(i)));
+new IntersectionObserver(es=>{document.querySelector('.mq div').style.animationPlayState=es[0].isIntersecting?'running':'paused'}).observe(document.querySelector('.mq'));
+const F=document.querySelector('#contacto form'),fs=$('fs'),N=S.slots==null?3:S.slots;
+F&&F.addEventListener('focusin',()=>track('form_start'),{once:true});F&&F.querySelectorAll('.er').forEach(x=>{x.id='er-'+x.dataset.e;x.setAttribute('aria-live','polite');F[x.dataset.e].setAttribute('aria-describedby',x.id)});
+F&&document.querySelectorAll('[data-svc]').forEach(a=>a.addEventListener('click',()=>{F.s.value=a.dataset.svc;const cu=F.m.value.trim(),au=F.dataset.auto||'';if(cu&&cu!==au)return;const m=a.dataset.msg||'';F.m.value=m;F.dataset.auto=m}));
+document.querySelectorAll('.slots').forEach(x=>{x.textContent=N>0?N+(N===1?' CUPO DISPONIBLE':' CUPOS DISPONIBLES'):'SIN CUPOS POR AHORA'});
+if(F)F.onsubmit=e=>{e.preventDefault();const v=k=>F[k].value.trim(),er={};
+if(!v('n'))er.n='Escribe tu nombre.';
+if(!v('e'))er.e='Indica tu correo o @ del canal.';else if(!/^(@[\w.]{2,}|[^\s@]+@[^\s@]+\.[^\s@]+)$/.test(v('e')))er.e='Escribe un correo válido (nombre@dominio.com) o un @usuario.';
+if(!v('s'))er.s='Elige un tipo de servicio.';
+if(v('l')){try{if(!/^https?:$/.test(new URL(v('l')).protocol))throw 0}catch(_){er.l='Escribe un enlace completo que empiece por https://'}}
+if(!v('m'))er.m='Cuéntame qué necesitas.';
+F.querySelectorAll('.er').forEach(x=>{x.textContent=er[x.dataset.e]?'⚠ '+er[x.dataset.e]:'';F[x.dataset.e].setAttribute('aria-invalid',er[x.dataset.e]?'true':'false')});
+if(Object.keys(er).length){fs.textContent='Revisa los campos marcados.';const f=F.querySelector('.er:not(:empty)');if(f)f.previousElementSibling.focus();return}
+track('form_submit',{service:v('s')});location.href='mailto:'+S.mail+'?subject='+encodeURIComponent(v('s')+' · '+v('n'))+'&body='+encodeURIComponent('Nombre: '+v('n')+'\nContacto: '+v('e')+'\nServicio: '+v('s')+'\nEnlace: '+(v('l')||'—')+'\n\n'+v('m'));
+fs.textContent='Se abrió tu programa de correo con el mensaje listo. La solicitud solo se envía cuando pulses «Enviar» allí; esta página no puede confirmarlo. Si no se abrió, escribe a '+S.mail+'.'};
+if(window.ED)ED({S,SRC,E,K,esc,safe,BS,XS});};document.readyState==='loading'?document.addEventListener('DOMContentLoaded',go):go()})();
+</script>
+</body></html>
